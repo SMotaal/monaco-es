@@ -4,12 +4,13 @@
   "description": "Configurable Monaco Editor (ECMAScript) modules using Rollup",
   "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "sources/index.mjs",
   "module": "dist/index.js",
   "browser": "dist/index.js",
   "bin": {
-    "serve-monaco-es": "lib/server.mjs"
+    "serve-monaco-es": "lib/server.mjs",
+    "build-monaco-es": "lib/build.mjs"
   },
   "files": [
     "config",
@@ -20,18 +21,15 @@
     "sources/monaco.mjs",
     "sources/worker.mjs",
     "sources/debugging.mjs",
+    "sources/modules/features.mjs",
     "static",
     "types.d.ts",
     "test"
   ],
   "scripts": {
-    "rollup": "rollup -c",
-    "server": "node --experimental-modules ./lib/server",
-    "build": "$npm_package_scripts_rollup",
-    "build-monaco": "$npm_package_scripts_rollup",
-    "serve": "$npm_package_scripts_server",
-    "serve-monaco": "$npm_package_scripts_serve",
-    "install": "node -e \"process.cwd().includes('packages/monaco-es') && process.exit(-1)\" && rollup -c || true"
+    "build": "rollup -c",
+    "start": "node --experimental-modules ./lib/server.mjs",
+    "install": "node --experimental-modules ./lib/build.mjs"
   },
   "dependencies": {
     "monaco-editor": "*",

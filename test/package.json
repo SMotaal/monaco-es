@@ -1,0 +1,12 @@
+{
+  "name": "monaco-es-test-package",
+  "version": "0.0.0",
+  "scripts": {
+  },
+  "dependencies": {
+    "monaco-es": "../"
+  },
+  "resolutions": {
+    "monaco-es": "../"
+  }
+}

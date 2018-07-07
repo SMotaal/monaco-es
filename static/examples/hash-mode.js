@@ -49,13 +49,13 @@ function createEditor(monaco = currentMonaco, container, options = {}) {
   const editor = monaco.editor.create(container);
 
   const setMode = async mode => {
-    console.log(modes);
+    // console.log(modes);
     if (!mode || !(await importMode(mode)))
       return console.warn(`Unknown mode ${mode}`);
     try {
       language = modes[mode];
       monaco.editor.setModelLanguage(editor.getModel(), language);
-      console.log('setMode(%s)', mode);
+      // console.log('setMode(%s)', mode);
     } catch (exception) {
       console.warn(`Failed to switch to "${mode}"`, exception);
     }
@@ -77,13 +77,12 @@ async function importMode(mode) {
     let specifier = `languages/${
       specialModes.includes(mode) ? `${mode}/${mode}` : mode
     }.js`;
-    console.log('importMode(%s) => %s', mode, `${specifier}`);
+    // console.log('importMode(%s) => %s', mode, `${specifier}`);
     try {
-      // url = new URL(url, import.meta.url);
       const imported = importMonacoModule(specifier);
       imports[mode] = imported.catch(() => (imports[mode] = false));
       const module = await imported;
-      console.log('importMode(%s) => %s => %o', mode, `${specifier}`, module);
+      // console.log('importMode(%s) => %s => %o', mode, `${specifier}`, module);
       populateModes();
       return (imports[mode] = module);
     } catch (exception) {

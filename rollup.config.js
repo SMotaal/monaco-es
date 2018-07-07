@@ -9,10 +9,14 @@ const filenames = `[name].js`;
 const minify = false;
 
 // Input
-const source = 'monaco-editor/esm';
-const index = 'sources/index.mjs';
-const monaco = 'sources/monaco.mjs';
-const environment = 'sources/environment.mjs';
+const distribution = 'monaco-editor/esm';
+const sources = {
+  index: 'sources/index.mjs',
+  monaco: 'sources/monaco.mjs',
+  environment: 'sources/environment.mjs',
+  debugging: 'sources/debugging.mjs',
+  worker: 'sources/worker.mjs',
+};
 const sourcemapping = false;
 
 // Cleanup
@@ -22,7 +26,7 @@ export default {
   optimizeChunks: true,
   experimentalCodeSplitting: true,
 
-  input: merge({index, monaco, environment}, record(contributions, resolve)),
+  input: merge(sources, record(contributions, resolve)),
   manualChunks: record(merge(...chunks), chunk => map(chunk, resolve)),
 
   output: {
@@ -55,7 +59,7 @@ export default {
 function resolve(specifier) {
   resolve = specifier =>
     (specifier == (specifier = `${specifier || ''}`) &&
-      require.resolve(specifier.replace(/^\/vs\//, `${source}/vs/`))) ||
+      require.resolve(specifier.replace(/^\/vs\//, `${distribution}/vs/`))) ||
     '';
   return resolve(specifier);
 }
