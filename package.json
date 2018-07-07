@@ -2,11 +2,15 @@
   "name": "monaco-es",
   "displayName": "Monaco ES (alpha)",
   "description": "Configurable Monaco Editor (ECMAScript) modules using Rollup",
+  "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "sources/index.mjs",
   "module": "dist/index.js",
   "browser": "dist/index.js",
+  "bin": {
+    "serve-monaco-es": "lib/server.mjs"
+  },
   "files": [
     "config",
     "lib",
@@ -14,8 +18,11 @@
     "sources/index.mjs",
     "sources/environment.mjs",
     "sources/monaco.mjs",
+    "sources/worker.mjs",
+    "sources/debugging.mjs",
     "static",
-    "types.d.ts"
+    "types.d.ts",
+    "test"
   ],
   "scripts": {
     "rollup": "rollup -c",
