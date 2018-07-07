@@ -4,7 +4,7 @@
   "description": "Configurable Monaco Editor (ECMAScript) modules using Rollup",
   "author": "Saleh Abdel Motaal <saleh@grasppe.com>",
   "license": "MIT",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "sources/index.mjs",
   "module": "dist/index.js",
   "browser": "dist/index.js",

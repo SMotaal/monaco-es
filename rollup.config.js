@@ -44,13 +44,12 @@ export default {
     css(),
     deps({resolve, dependencies}),
     plugins.nodeResolve({jsnext: true, module: true}),
+    patched.commonjs(),
     plugins.re({
-      include: '**/vscode-css-languageservice/services/languageFacts.js',
       replaces: {
-        '= this.getBrowserLabel(': '= getBrowserLabel(',
+        'browserLabel = this.getBrowserLabel(entry.browsers)': 'browserLabel = getBrowserLabel(entry.browsers)',
       },
     }),
-    patched.commonjs(),
     minify && plugins.terser(require('./config/terser.json')),
     sourcemapping && plugins['sourcemaps?'](),
   ],
