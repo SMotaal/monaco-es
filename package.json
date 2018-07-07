@@ -3,7 +3,7 @@
   "displayName": "Monaco ES (alpha)",
   "description": "Configurable Monaco Editor (ECMAScript) modules using Rollup",
   "license": "MIT",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.1",
   "main": "sources/index.mjs",
   "module": "dist/index.js",
   "browser": "dist/index.js",
