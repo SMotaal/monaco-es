@@ -1,0 +1,52 @@
+{
+  "name": "monaco-es",
+  "displayName": "Monaco ES (alpha)",
+  "description": "Configurable Monaco Editor (ECMAScript) modules using Rollup",
+  "license": "MIT",
+  "version": "0.0.0-alpha.1",
+  "main": "sources/index.mjs",
+  "module": "dist/index.js",
+  "browser": "dist/index.js",
+  "files": [
+    "config",
+    "lib",
+    "rollup.config.js",
+    "sources/index.mjs",
+    "sources/environment.mjs",
+    "sources/monaco.mjs",
+    "static",
+    "types.d.ts"
+  ],
+  "scripts": {
+    "rollup": "rollup -c",
+    "server": "node --experimental-modules ./lib/server",
+    "build": "$npm_package_scripts_rollup",
+    "build-monaco": "$npm_package_scripts_rollup",
+    "serve": "$npm_package_scripts_server",
+    "serve-monaco": "$npm_package_scripts_serve",
+    "install": "node -e \"process.cwd().includes('packages/monaco-es') && process.exit(-1)\" && rollup -c || true"
+  },
+  "dependencies": {
+    "monaco-editor": "*",
+    "rollup": "*",
+    "rollup-plugin-commonjs": "*",
+    "rollup-plugin-node-resolve": "*",
+    "rollup-plugin-re": "*",
+    "rollup-pluginutils": "*",
+    "vscode-languageserver-types": "*"
+  },
+  "optionalDependencies": {
+    "rollup-plugin-sourcemaps": "*",
+    "rollup-plugin-terser": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node": "^10.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

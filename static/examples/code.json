@@ -1,0 +1,5 @@
+{
+  "css": "body {\n  background: red;\n}",
+  "typescript": "class X extends Object {\n  x = 1;\n}",
+  "markdown": "# H1\n\n## H2\n\n```js\n  const x = 1;```\n\n[H1](#h1)\n\n"
+}

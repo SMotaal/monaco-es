@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <!-- <script type=module src="./build/index.js"></script> -->
+  <style>
+    html,
+    body,
+    .fill {
+      width: -webkit-fill-available;
+      height: -webkit-fill-available;
+      width: fill;
+      height: fill;
+    }
+
+    html,
+    body,
+    .fit {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+  <script type=module>
+    import Example from './examples/examples.js';
+    import Monaco from './node_modules/monaco-es/dist/index.js';
+    import Environment from './node_modules/monaco-es/dist/environment.js';
+
+    (async (example = 'hash-mode', imports = {}) => {
+      try {
+        const monaco = imports.monaco = await Monaco(Environment());
+        const factory = imports.example = await Example(example);
+        const editor = await factory(monaco);
+        const {domElement} = editor;
+        domElement.classList.add('fill');
+        const resize = () => editor.layout();
+        addEventListener('resize', resize);
+        resize();
+        console.log('editor', editor);
+      } finally {
+        console.log('imports', imports);
+      }
+    })()
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
