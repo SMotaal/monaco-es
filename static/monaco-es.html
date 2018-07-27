@@ -24,6 +24,9 @@
     import Example from './examples/examples.js';
     import Monaco from './node_modules/monaco-es/dist/index.js';
     import Environment from './node_modules/monaco-es/dist/environment.js';
+    import * as Standalone from './node_modules/monaco-es/dist/standalone.js';
+
+    console.log({Example, Monaco, Environment, Standalone});
 
     (async (example = 'hash-mode', imports = {}) => {
       try {

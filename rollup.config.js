@@ -12,7 +12,8 @@ const minify = false;
 const distribution = 'monaco-editor/esm';
 const sources = {
   index: 'sources/index.mjs',
-  monaco: 'sources/monaco.mjs',
+  // standalone: 'sources/standalone.ts',
+  monaco: 'sources/monaco.ts',
   environment: 'sources/environment.mjs',
   debugging: 'sources/debugging.mjs',
   worker: 'sources/worker.mjs',
@@ -47,7 +48,8 @@ export default {
     patched.commonjs(),
     plugins.re({
       replaces: {
-        'browserLabel = this.getBrowserLabel(entry.browsers)': 'browserLabel = getBrowserLabel(entry.browsers)',
+        'browserLabel = this.getBrowserLabel(entry.browsers)':
+          'browserLabel = getBrowserLabel(entry.browsers)',
       },
     }),
     minify && plugins.terser(require('./config/terser.json')),

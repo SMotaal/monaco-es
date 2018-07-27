@@ -35,4 +35,4 @@ export async function CurrentScope(...keys) {
 
 export const {log: Log, warn: Warn} = console;
 
-CurrentScope(['import.meta', 'location', 'document']).then(Log, () => {});
+// CurrentScope(['import.meta', 'location', 'document']).then(Log, () => {});

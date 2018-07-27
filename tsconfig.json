@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnusedLabels": true,
+    "suppressExcessPropertyErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "allowJs": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "stripInternal": true,
+    "declarationDir": "dist",
+    "noEmit": false
+  },
+  "files": [
+    "global.d.ts",
+    // "sources/standalone.ts",
+    "sources/monaco.ts",
+    "sources/environment.ts",
+    "sources/index.ts"
+    // "sources/debugging.ts",
+    // "sources/worker.ts"
+  ]
+}

@@ -7,5 +7,5 @@ export default async environment => {
     environment,
   );
 
-  return import(`./monaco.mjs`);
+  return import(`./monaco.ts`);
 };
