@@ -14,6 +14,8 @@ yarn add monaco-es
 
 - Add type definitions to top-level build modules
 
+- Add `dist/standalone.js` for finer-grained service overrides
+
 ### Version 0.0.5
 
 - Add `serve-monaco-es` bin which will [automatically serve files from process.cwd()](https://github.com/SMotaal/monaco-es/issues/2) to allow experimental testing with monaco-es as a dependency.

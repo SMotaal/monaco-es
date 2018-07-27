@@ -22,6 +22,7 @@
     "sources/worker.mjs",
     "sources/environment.mjs",
     "sources/debugging.mjs",
+    "sources/standalone.ts",
     "sources/monaco.ts",
     "sources/modules/features.ts",
     "static",

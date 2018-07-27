@@ -12,7 +12,7 @@ const minify = false;
 const distribution = 'monaco-editor/esm';
 const sources = {
   index: 'sources/index.mjs',
-  // standalone: 'sources/standalone.ts',
+  standalone: 'sources/standalone.ts',
   monaco: 'sources/monaco.ts',
   environment: 'sources/environment.mjs',
   debugging: 'sources/debugging.mjs',

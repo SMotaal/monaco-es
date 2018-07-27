@@ -18,7 +18,7 @@
   },
   "files": [
     "global.d.ts",
-    // "sources/standalone.ts",
+    "sources/standalone.ts",
     "sources/monaco.ts",
     "sources/environment.ts",
     "sources/index.ts"
