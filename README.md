@@ -37,4 +37,5 @@ yarn add monaco-es
 
 ## Known Issues
 
+- Workers: so far `new Worker(…, {type: 'module'})` supported in Chrome only
 - [ESM: this === undefined in "esm/vs/language/css/languageFeatures.js" and possibly others](https://github.com/Microsoft/monaco-editor/issues/945)
