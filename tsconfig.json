@@ -2,7 +2,6 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
-    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "allowUnusedLabels": true,
     "suppressExcessPropertyErrors": true,
@@ -20,8 +19,8 @@
     "global.d.ts",
     "sources/standalone.ts",
     "sources/monaco.ts",
-    "sources/environment.ts",
-    "sources/index.ts"
+    "sources/environment.d.ts",
+    "sources/index.d.ts"
     // "sources/debugging.ts",
     // "sources/worker.ts"
   ]

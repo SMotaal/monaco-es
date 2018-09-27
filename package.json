@@ -13,26 +13,9 @@
     "serve-monaco-es": "lib/server.mjs",
     "build-monaco-es": "lib/build.mjs"
   },
-  "files": [
-    "config",
-    "lib",
-    "rollup.config.js",
-    "tsconfig.json",
-    "sources/index.mjs",
-    "sources/worker.mjs",
-    "sources/environment.mjs",
-    "sources/debugging.mjs",
-    "sources/standalone.ts",
-    "sources/monaco.ts",
-    "sources/modules/features.ts",
-    "static",
-    "types.d.ts",
-    "global.d.ts",
-    "test"
-  ],
   "scripts": {
-    "build": "rollup -c",
-    "postbuild": "tsc",
+    "build": "node --experimental-modules ./lib/build.mjs",
+    "postbuild": "tsc --emitDeclarationOnly",
     "start": "node --experimental-modules ./lib/server.mjs",
     "install": "node --experimental-modules ./lib/build.mjs"
   },

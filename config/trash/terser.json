@@ -1,0 +1,15 @@
+{
+  "ecma": 8,
+  "module": true,
+  "keep_classnames": true,
+  "keep_fnames": true,
+  "sourceMap": true,
+  "mangle": false,
+  "compress": {
+    "keep_infinity": true,
+    "passes": 2
+  },
+  "output": {
+    "ecma": 8
+  }
+}

@@ -12,11 +12,11 @@ export const findContainer = (container, parent) => {
   return container;
 };
 
-export const importNodeModule = (specifier, base = origin) =>
-  import(`${new URL(`./node_modules/${specifier}`, base)}`);
+export const importNodeModule = (specifier, base = location) =>
+  import(`${new URL(`../../${specifier}`, base)}`);
 
-export const importMonacoModule = (specifier, base = origin) =>
-  import(`${new URL(`./node_modules/monaco-es/dist/${specifier}`, base)}`);
+export const importMonacoModule = (specifier, base = location) =>
+  import(`${new URL(`../dist/${specifier}`, base)}`);
 
   // 'node_modules/monaco-es/dist'
 

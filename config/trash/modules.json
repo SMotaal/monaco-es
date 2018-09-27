@@ -5,7 +5,8 @@
     "languages/json/json": "/vs/language/json/monaco.contribution.js",
     "languages/json/json.worker": "/vs/language/json/json.worker.js",
     "languages/json/jsonMode": "/vs/language/json/jsonMode.js",
-    "languages/json/jsoncParser": "/vs/language/json/_deps/jsonc-parser/main.js",
+    "languages/json/jsoncParser":
+      "/vs/language/json/_deps/jsonc-parser/main.js",
     "languages/css/css": "/vs/language/css/monaco.contribution.js",
     "languages/css/css.worker": "/vs/language/css/css.worker.js",
     "languages/css/cssMode": "/vs/language/css/cssMode.js",
@@ -15,7 +16,8 @@
     "languages/ts/ts": "/vs/language/typescript/monaco.contribution.js",
     "languages/ts/ts.worker": "/vs/language/typescript/ts.worker.js",
     "languages/ts/tsMode": "/vs/language/typescript/tsMode.js",
-    "languages/ts/typescriptServices": "/vs/language/typescript/lib/typescriptServices.js",
+    "languages/ts/typescriptServices":
+      "/vs/language/typescript/lib/typescriptServices.js",
     "languages/bat": "/vs/basic-languages/bat/bat.js",
     "languages/coffee": "/vs/basic-languages/coffee/coffee.js",
     "languages/cpp": "/vs/basic-languages/cpp/cpp.js",
@@ -58,7 +60,8 @@
     "languages/xml": "/vs/basic-languages/xml/xml.js"
   },
   "dependencies": {
-    "vscode-languageserver-types/main.js": "vscode-languageserver-types/lib/esm/main.js"
+    "vscode-languageserver-types/main.js":
+      "vscode-languageserver-types/lib/esm/main.js"
   },
   "chunks": [
     {
