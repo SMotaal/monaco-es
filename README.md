@@ -10,6 +10,19 @@ yarn add monaco-es
 
 ## Changes
 
+### Version 0.0.7
+
+***Reminder**: this is all extremely experimental*
+
+- Resolved various issues — only works in Chrome for now
+  > Requires Module support in Workers
+
+- Updated references in `static/monaco-es.html` — tested with [`http-server`](https://www.npmjs.com/package/http-server)
+
+  > Serving from `monaco-es` will resolve at `/static/monaco-es.html`
+
+- Published as experimental — [Notes](https://github.com/SMotaal/experimental/blob/master/monaco-es.md)
+
 ### Version 0.0.6
 
 - Add type definitions to top-level build modules

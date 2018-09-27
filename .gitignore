@@ -1,5 +1,5 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-dist
+dist/trash
 
 # Created by https://www.gitignore.io/api/macos,visualstudiocode,node
 
